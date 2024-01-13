@@ -31,7 +31,8 @@ public class HelloController {
     }
 
     // Remember to Add Rights Properties and Dependencies to the
-    // "application.properties" and "pom.xml" Files
+    // "application.properties" and "pom.xml" Files.
+    // Also, Remember the Dedicated JSP Project Files Structure
     // http://localhost:8080//myjsp
     @RequestMapping("/say-hello-jsp")
     // @ResponseBody
