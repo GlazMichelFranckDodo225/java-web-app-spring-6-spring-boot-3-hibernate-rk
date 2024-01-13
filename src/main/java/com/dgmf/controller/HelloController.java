@@ -6,30 +6,37 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class HelloController {
-    // http://localhost:8080/hello
-    @RequestMapping("/hello")
+    // http://localhost:8080/say-hello
+    @RequestMapping("/say-hello")
     @ResponseBody
     public String sayHello() {
         return "Hello, what are you learning today ?";
     }
 
-    // http://localhost:8080/hello-html
-    @RequestMapping("/hello-html")
+    // http://localhost:8080/say-hello-html
+    @RequestMapping("/say-hello-html")
     @ResponseBody
     public String sayHelloHtml() {
         StringBuffer sb = new StringBuffer();
-        sb.append("<!DOCTYPE html>");
-        sb.append("<html lang=\"en\">");
+        sb.append("<html>");
         sb.append("<head>");
-        sb.append("<meta charset=\"UTF-8\">");
-        sb.append("<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">");
-        sb.append("<title>My First HTML Page</title>");
+        sb.append("<title>My First HTML Page - Changed !</title>");
         sb.append("</head>");
         sb.append("<body>");
-        sb.append("My First HTML Page with Body.");
+        sb.append("My First HTML Page with Body - Changed !");
         sb.append("</body>");
         sb.append("</html>");
 
         return sb.toString();
+    }
+
+    // Remember to Add Rights Properties and Dependencies to the
+    // "application.properties" and "pom.xml" Files
+    // http://localhost:8080//myjsp
+    @RequestMapping("/say-hello-jsp")
+    // @ResponseBody
+    public String sayHelloJsp() {
+        // return "Hello, what are you learning today ? - JSP";
+        return "sayHello";
     }
 }
