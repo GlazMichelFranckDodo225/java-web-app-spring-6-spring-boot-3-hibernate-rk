@@ -17,6 +17,7 @@ public class LoginController {
     public String login(@RequestParam String name, ModelMap modelMap) {
         modelMap.put("name", name);
 
+        // Logging Statements
         logger.debug("Request Param is : {}", name);
         logger.info("Request Param is : {}", name);
         logger.warn("Request Param is : {}", name);
