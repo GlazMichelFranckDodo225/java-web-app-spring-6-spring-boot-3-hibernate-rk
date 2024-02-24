@@ -1,7 +1,10 @@
 package com.dgmf.controller.login;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class LoginController {
@@ -13,9 +16,21 @@ public class LoginController {
 //
 //        return "login";
 //    }
-    @RequestMapping("/login")
+    @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String login() {
 
         return "login";
+    }
+
+    @RequestMapping(value = "/login", method = RequestMethod.POST)
+    public String homePage(
+            @RequestParam String firstName,
+            @RequestParam String lastName,
+            ModelMap modelMap
+    ) {
+        modelMap.put("firstName", firstName);
+        modelMap.put("lastName", lastName);
+
+        return "home_page";
     }
 }

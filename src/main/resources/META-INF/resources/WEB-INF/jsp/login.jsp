@@ -7,8 +7,8 @@
         Welcome to the Login Page.
 
         <form action="" method="post">
-            Name : <input type="text" name="name">
-            Password : <input type="password" name="password">
+            First Name : <input type="text" name="firstName">
+            Last Name : <input type="text" name="lastName">
             <input type="submit">
         </form>
     </body>
