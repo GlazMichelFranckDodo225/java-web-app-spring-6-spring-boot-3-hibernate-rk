@@ -1,4 +1,4 @@
-package com.dgmf.controller.hello;
+package com.dgmf.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

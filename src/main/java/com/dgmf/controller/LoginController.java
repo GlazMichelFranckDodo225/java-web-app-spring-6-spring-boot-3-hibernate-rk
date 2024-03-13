@@ -1,4 +1,4 @@
-package com.dgmf.controller.login;
+package com.dgmf.controller;
 
 import com.dgmf.service.AuthenticationService;
 import lombok.RequiredArgsConstructor;
